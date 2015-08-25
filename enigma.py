@@ -257,9 +257,10 @@ if __name__ == "__main__":
 	correctly when the rotors start from the same position.
 	'''
 	print 'JACKDAWS LOVE MY BIG SPHINX OF QUARTZ'
-	rotorset.setRotorOffsets([0,0,0])
+	rotorset.setRotorOffsets([0,0,2])
 	print "start: " + str(rotorset.rotoroffsets)
-	print rotorset.encodeMessage('JACKDAWS LOVE MY BIG SPHINX OF QUARTZ')
-	rotorset.setRotorOffsets([0,0,0])
+	temp = rotorset.encodeMessage('JACKDAWS LOVE MY BIG SPHINX OF QUARTZ')
+	print temp
+	rotorset.setRotorOffsets([0,0,2])
 	print "start: " + str(rotorset.rotoroffsets)
-	print rotorset.encodeMessage('MHQZRJHM RNEJ UD GHH AOGKCP WU GQUJLO')
+	print rotorset.encodeMessage(temp)
